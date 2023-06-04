@@ -23,7 +23,7 @@ function HM_BUTTON(props: HMButtonProps, ...rest) {
         'rounded-lg': props.rounded
     });
     return (
-        <button rest className={classes}>{props.children}</button>
+        <button className={classes}>{props.children}</button>
     )
 }
 
