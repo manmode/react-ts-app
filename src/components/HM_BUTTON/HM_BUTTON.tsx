@@ -13,7 +13,6 @@ type formattingOptions = {
     danger?: boolean,
     warning?: boolean
 }
-
 // type formattingOption = anyOneFormatting<formattingOptions>;
 
 type attributeProps = {
