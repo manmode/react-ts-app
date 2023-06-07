@@ -1,16 +1,30 @@
 import React from 'react';
 import classnames from 'classnames';
-type HMButtonProps = {
-    primary?,
-    secondary?,
-    information?,
-    success?,
-    danger?,
-    warning?,
-    outline?,
-    rounded?,
-    children: React.ReactNode
+
+
+// type anyOneFormatting<T> = {
+//     // [K in keyof T]: k ? T[K}]: never;
+// }
+type formattingOptions = {
+    primary?: boolean,
+    secondary?: boolean,
+    information?: boolean,
+    success?: boolean,
+    danger?: boolean,
+    warning?: boolean
 }
+
+// type formattingOption = anyOneFormatting<formattingOptions>;
+
+type attributeProps = {
+    outline: boolean
+    rounded: boolean
+}
+type HMButtonProps =
+    React.ButtonHTMLAttributes<HTMLButtonElement> &
+    formattingOptions &
+    Partial<attributeProps>;
+
 const HM_BUTTON: React.FC<HMButtonProps> = ({
     primary,
     secondary,
